@@ -1,11 +1,15 @@
 public class Patient {
+    private String email;
+    private String password;
     private String name;
     private String address;
     private String gender;
     private String phoneNumber;
     private String age;
 
-    public Patient(String name, String gender,String address, String phoneNumber,String age) {
+    public Patient(String email,String password,String name, String gender,String address, String phoneNumber,String age) {
+        this.email = email;
+        this.password = password;
         this.name = name;
         this.gender = gender;
         this.address = address;
@@ -13,15 +17,16 @@ public class Patient {
         this.age = age;
     }
 
-    public Patient() {
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public String getGender() {
         return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public String getName() {
@@ -39,22 +44,4 @@ public class Patient {
     public String  getAge() {
         return age;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void setAge(String  age) {
-        this.age = age;
-    }
-
-   
 }

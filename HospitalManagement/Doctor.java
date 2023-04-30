@@ -1,11 +1,15 @@
 public class Doctor {
+    private String email;
+    private String password;
     private String name;
     private String  age;
     private String gender;
     private String specialization;
     private String availability;
-
-    public Doctor(String name,String age,String gender, String specialization, String availability) {
+    
+    public Doctor(String email,String password,String name,String age,String gender, String specialization, String availability) {
+        this.email = email;
+        this.password = password;
         this.name = name;
         this.age=age;
         this.gender=gender;
@@ -13,7 +17,13 @@ public class Doctor {
         this.availability = availability;
     }
 
-    public Doctor() {
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
 
@@ -21,29 +31,10 @@ public class Doctor {
         return gender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getAge() {
         return age;
     }
-
-    public void setAge(String  age) {
-        this.age = age;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
-    }
-
-    public void setAvailability(String availability) {
-        this.availability = availability;
-    }
+    
 
     public String getName() {
         return name;
